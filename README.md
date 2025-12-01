@@ -1,5 +1,5 @@
 **Heart_Stroke_Risk_Prediction_with_explainable_ML**
--This project predicts the likelihood of stroke occurrence based on clinical, demographic, and lifestyle features. It implements a complete end-to-end machine learning pipeline inside a single notebook
+This project predicts the likelihood of stroke occurrence based on clinical, demographic, and lifestyle features. It implements a complete end-to-end machine learning pipeline inside a single notebook
 
 ## Dataset
 
@@ -33,58 +33,58 @@
 
 2.**Train-Test Split & Scaling**
 
--Stratified 80/20 split
--StandardScaler applied to numeric features
+Stratified 80/20 split
+StandardScaler applied to numeric features
 
 3. **Resampling**
--Handle Class Imbalance using advanced SMOTE techiques
--Implemented advanced SMOTE variants (e.g., SMOTENC / SMOTETomek / SMOTEENN depending on data structure) to training set only models
--Oversampling applied only to the training set to avoid data leakage
+Handle Class Imbalance using advanced SMOTE techiques
+Implemented advanced SMOTE variants (e.g., SMOTENC / SMOTETomek / SMOTEENN depending on data structure) to training set only models
+Oversampling applied only to the training set to avoid data leakage
 
 4.**Model Training**
--Logistic Regression, Random Forest, XGBoost, CAT BOOST, LightGBM
-- Hybrid implementation of CAT
--Fixed random seeds and reference hyperparameters
+Logistic Regression, Random Forest, XGBoost, CAT BOOST, LightGBM
+Hybrid implementation of CAT
+Fixed random seeds and reference hyperparameters
 
 5.**Evaluation**
 
--The notebook includes comprehensive evaluation and interpretability
--Model Performance Metrics
--Accuracy
--Precision
--Recall
--mcc
--balanced_accuracy
--f2
--specivicity
--F1-Score
--ROC-AUC
--Confusion Matrices
--ROC Curves
--Precision-Recall Curves
+The notebook includes comprehensive evaluation and interpretability
+Model Performance Metrics
+Accuracy
+Precision
+Recall
+mcc
+balanced_accuracy
+f2
+specivicity
+F1-Score
+ROC-AUC
+Confusion Matrices
+ROC Curves
+Precision-Recall Curves
 
 6.**Result**
 
--Best model selected based on Recall, f2, mcc and balanced_accuracy: CAT_SMOTEEn( CatBoost trained on SMOTE-enhanced dataset)
+Best model selected based on Recall, f2, mcc and balanced_accuracy: CAT_SMOTEEn( CatBoost trained on SMOTE-enhanced dataset)
 
 7. **SHAP & LIME Explainability**
   - SHAP and LIME were used to explain the model’s predictions.
   - SHAP shows how each feature contributes to overall and individual predictions.
   - LIME explains single predictions by highlighting the most influential features.
-  - 
+   
 8.**Fairness estimation**
 -Fairness was evaluated by calculating group-wise performance for gender, residence type, and age groups.
 -For each subgroup, the model's Recall (TPR), Selection Rate, and sample count were computed to check whether predictions were balanced and consistent across different demographic categories.
 
 9. **Risk Stratification**
--Risk levels were created using the model’s predicted probabilities
+Risk levels were created using the model’s predicted probabilities
 
--Low Risk: 0–0.30
--Medium Risk: 0.30–0.70
--High Risk: 0.70–1.0
+Low Risk: 0–0.30
+Medium Risk: 0.30–0.70
+High Risk: 0.70–1.0
 
--Each category was summarized by total samples, true strokes, and stroke rate.
--If SHAP values were available, a second stratification used total SHAP impact, split into low/medium/high based on percentile thresholds.
+Each category was summarized by total samples, true strokes, and stroke rate.
+If SHAP values were available, a second stratification used total SHAP impact, split into low/medium/high based on percentile thresholds.
    
 **How to Run in Colab**
 
