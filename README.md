@@ -1,3 +1,5 @@
+****Uploaded the PDF Document of Milestone-3 here in the repo,please read in here as my submission in canvas as pdf has blank pages due to an error while drafting lot of content is not saved in canvas pdf doc****
+
 **Heart_Stroke_Risk_Prediction_with_explainable_ML**
 This project predicts the likelihood of stroke occurrence based on clinical, demographic, and lifestyle features. It implements a complete end-to-end machine learning pipeline inside a single notebook
 
